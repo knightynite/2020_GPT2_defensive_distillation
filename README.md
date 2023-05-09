@@ -9,3 +9,12 @@ defensive distillation as a (now-discredited) defense against adversarial exampl
 - `src/defensive_distill.py` — train a teacher, then distill into a student at high
   softmax temperature; show how it appears to defend against FGSM but breaks under PGD
   with the right loss formulation
+
+
+## Run
+
+```bash
+pip install -r requirements.txt
+python src/gpt2_generate.py --prompt "The most important security risk of LLMs is"
+python src/defensive_distill.py
+```
