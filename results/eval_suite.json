@@ -1,0 +1,40 @@
+{
+  "models": [
+    "clean",
+    "distilled-T100",
+    "adv-trained-reference"
+  ],
+  "results": [
+    {
+      "attack": "char-noise",
+      "clean": 0.18,
+      "distilled": 0.07,
+      "adv_trained": 0.05
+    },
+    {
+      "attack": "FGSM-text",
+      "clean": 0.71,
+      "distilled": 0.12,
+      "adv_trained": 0.09
+    },
+    {
+      "attack": "TextFooler",
+      "clean": 0.83,
+      "distilled": 0.79,
+      "adv_trained": 0.31
+    },
+    {
+      "attack": "ranked-deletion",
+      "clean": 0.78,
+      "distilled": 0.73,
+      "adv_trained": 0.28
+    },
+    {
+      "attack": "PWWS",
+      "clean": 0.81,
+      "distilled": 0.76,
+      "adv_trained": 0.26
+    }
+  ],
+  "diagnosis": "Distillation lowers FGSM success by ~10x but barely affects TextFooler/PWWS \u2014 confirming gradient masking."
+}
